@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>India Independence Day 2026 - 15 August</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --saffron: #FF9933;
+    --saffron-light: #FFBE76;
+    --saffron-deep: #E07000;
+    --white: #FFFFFF;
+    --green: #138808;
+    --green-light: #2ECC71;
+    --navy: #000080;
+    --chakra-blue: #1A47A0;
+    --cream: #FFF8F0;
+    --cream2: #FFF3E0;
+    --gold: #D4AF37;
+    --text-dark: #1A1208;
+    --text-mid: #4A3728;
+    --shadow-warm: rgba(255,153,51,0.25);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--text-dark);
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 5%;
+    background: rgba(255,248,240,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--saffron);
+    box-shadow: 0 2px 20px rgba(255,153,51,0.15);
+  }
+  .nav-logo {
+    font-family: 'Cinzel', serif; font-weight: 900; font-size: 1.15rem;
+    color: var(--saffron-deep); letter-spacing: 0.05em;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-chakra-mini {
+    width: 28px; height: 28px;
+    border: 3px solid var(--chakra-blue); border-radius: 50%;
+    position: relative; animation: spinChakra 8s linear infinite;
+  }
+  .nav-chakra-mini::before {
+    content: '';
+    position: absolute; inset: 3px;
+    background: radial-gradient(circle, var(--chakra-blue) 2px, transparent 2px);
+    border-radius: 50%;
+  }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a {
+    font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.82rem;
+    color: var(--text-mid); text-decoration: none; letter-spacing: 0.08em;
+    text-transform: uppercase; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--saffron-deep); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+    padding: 100px 5% 60px;
+    background: linear-gradient(160deg, var(--cream) 0%, var(--cream2) 40%, #FFF 100%);
+  }
+
+  /* 3D floating flag */
+  .flag-3d-wrapper {
+    perspective: 800px; margin-bottom: 40px;
+    animation: floatY 4s ease-in-out infinite;
+  }
+  .flag-3d {
+    width: min(480px, 88vw); height: auto;
+    transform-style: preserve-3d;
+    transform: rotateY(-8deg) rotateX(4deg);
+    transition: transform 0.6s ease;
+    border-radius: 4px;
+    box-shadow:
+      20px 20px 60px rgba(255,153,51,0.35),
+      -10px -10px 40px rgba(19,136,8,0.2),
+      0 0 0 2px var(--saffron);
+    position: relative;
+  }
+  .flag-3d:hover { transform: rotateY(4deg) rotateX(-2deg) scale(1.03); }
+
+  .flag-stripe {
+    display: block; width: 100%;
+    position: relative; overflow: hidden;
+  }
+  .stripe-saffron { background: linear-gradient(90deg,#FFB347,#FF9933,#E07000); height: 54px; }
+  .stripe-white   { background: linear-gradient(90deg,#f8f8f8,#fff,#f0f0f0); height: 54px; display: flex; align-items: center; justify-content: center; }
+  .stripe-green   { background: linear-gradient(90deg,#20A815,#138808,#0D6605); height: 54px; }
+
+  /* Ashoka Chakra */
+  .ashoka {
+    width: 50px; height: 50px;
+    border: 3.5px solid var(--chakra-blue);
+    border-radius: 50%;
+    position: relative;
+    animation: spinChakra 12s linear infinite;
+    flex-shrink: 0;
+  }
+  .ashoka::before {
+    content: '';
+    position: absolute; top: 50%; left: 50%;
+    width: 6px; height: 6px;
+    background: var(--chakra-blue); border-radius: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .ashoka-spoke {
+    position: absolute; top: 50%; left: 50%;
+    width: 46%; height: 1.5px;
+    background: var(--chakra-blue);
+    transform-origin: left center;
+  }
+
+  @keyframes spinChakra { to { transform: rotate(360deg); } }
+  @keyframes floatY {
+    0%,100% { transform: translateY(0); }
+    50%      { transform: translateY(-16px); }
+  }
+
+  /* Flag shadow underline */
+  .flag-shadow {
+    width: min(460px,80vw); height: 12px; margin-top: 4px;
+    background: radial-gradient(ellipse, rgba(255,153,51,0.35) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: floatY 4s ease-in-out infinite;
+    animation-delay: 0.1s;
+  }
+
+  .hero-title {
+    font-family: 'Cinzel', serif; font-weight: 900;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    text-align: center; line-height: 1.1;
+    background: linear-gradient(135deg, var(--saffron-deep) 0%, var(--saffron) 40%, var(--gold) 70%, var(--saffron-deep) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 14px;
+    letter-spacing: 0.02em;
+  }
+  .hero-sub {
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    color: var(--green); text-align: center; margin-bottom: 20px;
+  }
+  .hero-date {
+    font-family: 'Cinzel', serif; font-weight: 600;
+    font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+    letter-spacing: 0.2em; color: var(--chakra-blue);
+    text-transform: uppercase; text-align: center;
+  }
+  .hero-cta {
+    display: inline-block; margin-top: 32px;
+    padding: 14px 38px; border-radius: 60px;
+    background: linear-gradient(135deg, var(--saffron) 0%, var(--saffron-deep) 100%);
+    color: #fff; font-family: 'Cinzel', serif; font-weight: 600;
+    font-size: 0.95rem; letter-spacing: 0.12em;
+    text-decoration: none; text-transform: uppercase;
+    box-shadow: 0 8px 28px rgba(255,153,51,0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-cta:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 14px 36px rgba(255,153,51,0.6); }
+
+  .scroll-hint {
+    position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    color: var(--text-mid); font-size: 0.75rem; letter-spacing: 0.1em;
+    text-transform: uppercase; opacity: 0.6;
+  }
+  .scroll-arrow { width: 20px; height: 20px; border-right: 2px solid var(--saffron); border-bottom: 2px solid var(--saffron); transform: rotate(45deg); animation: bounce 1.5s ease-in-out infinite; }
+  @keyframes bounce { 0%,100% { transform: rotate(45deg) translateY(0); } 50% { transform: rotate(45deg) translateY(6px); } }
+
+  /* decorative bg particles */
+  .bg-particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  .particle {
+    position: absolute; border-radius: 50%; opacity: 0.12;
+    animation: particleDrift linear infinite;
+  }
+
+  /* ── SECTION SHARED ── */
+  section {
+    padding: 90px 5%;
+    position: relative;
+  }
+  .section-label {
+    font-family: 'Cinzel', serif; font-size: 0.72rem;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--saffron-deep); margin-bottom: 10px; display: block;
+  }
+  .section-title {
+    font-family: 'Cinzel', serif; font-weight: 900;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.15; margin-bottom: 20px;
+    color: var(--text-dark);
+  }
+  .section-title span { color: var(--saffron-deep); }
+  .section-body {
+    font-size: 1.05rem; line-height: 1.8; color: var(--text-mid);
+    max-width: 680px;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline-section {
+    background: linear-gradient(180deg, var(--cream) 0%, #fff 100%);
+  }
+  .timeline-head { text-align: center; margin-bottom: 64px; }
+  .timeline-head .section-title { margin: 0 auto 16px; max-width: 600px; }
+  .timeline-head .section-body { margin: 0 auto; text-align: center; }
+
+  .timeline { position: relative; max-width: 1100px; margin: 0 auto; }
+  .timeline::before {
+    content: '';
+    position: absolute; left: 50%; top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--saffron) 0%, var(--white) 50%, var(--green) 100%);
+    transform: translateX(-50%);
+  }
+
+  .tl-item {
+    display: flex; align-items: flex-start; gap: 40px;
+    margin-bottom: 70px; position: relative;
+    opacity: 0; transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .tl-item.visible { opacity: 1; transform: translateY(0); }
+  .tl-item:nth-child(odd)  { flex-direction: row; }
+  .tl-item:nth-child(even) { flex-direction: row-reverse; }
+
+  .tl-card {
+    flex: 1; max-width: 44%;
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(255,153,51,0.12), 0 2px 8px rgba(0,0,0,0.06);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-top: 4px solid var(--saffron);
+  }
+  .tl-card:hover {
+    transform: translateY(-8px) rotateY(2deg) rotateX(1deg);
+    box-shadow: 0 24px 60px rgba(255,153,51,0.2), 0 8px 20px rgba(0,0,0,0.08);
+  }
+  .tl-card.green-top { border-top-color: var(--green); }
+  .tl-card.navy-top  { border-top-color: var(--chakra-blue); }
+
+  .tl-img-wrap { width: 100%; height: 190px; overflow: hidden; position: relative; }
+  .tl-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+  .tl-card:hover .tl-img-wrap img { transform: scale(1.08); }
+  .tl-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.45));
+  }
+
+  .tl-card-body { padding: 22px 24px 26px; }
+  .tl-year {
+    font-family: 'Cinzel', serif; font-weight: 900;
+    font-size: 2rem; color: var(--saffron-deep); line-height: 1;
+    margin-bottom: 6px;
+  }
+  .tl-card.green-top .tl-year { color: var(--green); }
+  .tl-card.navy-top  .tl-year { color: var(--chakra-blue); }
+  .tl-card-title {
+    font-family: 'Cinzel', serif; font-weight: 600;
+    font-size: 1.05rem; margin-bottom: 10px; color: var(--text-dark);
+  }
+  .tl-card-text { font-size: 0.92rem; line-height: 1.7; color: var(--text-mid); }
+
+  .tl-dot {
+    position: absolute; left: 50%; top: 28px;
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--white); border: 3px solid var(--saffron);
+    transform: translateX(-50%);
+    z-index: 2; box-shadow: 0 0 0 5px rgba(255,153,51,0.2);
+  }
+  .tl-spacer { flex: 1; max-width: 44%; }
+
+  /* ── HEROES GRID ── */
+  .heroes-section {
+    background: linear-gradient(135deg, #FFF8EE 0%, #F0FFF0 100%);
+  }
+  .heroes-head { text-align: center; margin-bottom: 56px; }
+
+  .heroes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 28px; max-width: 1100px; margin: 0 auto;
+  }
+  .hero-card {
+    background: #fff; border-radius: 20px; overflow: hidden; text-align: center;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+    opacity: 0; transform: scale(0.9) translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.4s ease;
+    border-bottom: 4px solid var(--saffron);
+  }
+  .hero-card.visible {
+    opacity: 1; transform: scale(1) translateY(0);
+  }
+  .hero-card:hover {
+    transform: translateY(-10px) scale(1.03) rotateY(3deg);
+    box-shadow: 0 20px 50px rgba(255,153,51,0.2);
+  }
+  .hero-card:nth-child(2) { border-bottom-color: var(--green); transition-delay: 0.1s; }
+  .hero-card:nth-child(3) { border-bottom-color: var(--chakra-blue); transition-delay: 0.2s; }
+  .hero-card:nth-child(4) { border-bottom-color: var(--saffron); transition-delay: 0.3s; }
+  .hero-card:nth-child(5) { border-bottom-color: var(--green); transition-delay: 0.4s; }
+  .hero-card:nth-child(6) { border-bottom-color: var(--chakra-blue); transition-delay: 0.5s; }
+
+  .hero-img { width: 100%; height: 200px; object-fit: cover; object-position: top; display: block; filter: sepia(10%) contrast(105%); }
+  .hero-info { padding: 18px 16px 22px; }
+  .hero-name {
+    font-family: 'Cinzel', serif; font-weight: 700;
+    font-size: 1rem; color: var(--text-dark); margin-bottom: 6px;
+  }
+  .hero-role { font-size: 0.8rem; color: var(--text-mid); line-height: 1.5; }
+
+  /* ── CHAKRA SECTION ── */
+  .chakra-section {
+    background: linear-gradient(135deg, var(--navy) 0%, #000050 60%, #001080 100%);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .chakra-section .section-label { color: var(--saffron-light); }
+  .chakra-section .section-title { color: #fff; margin: 0 auto 20px; max-width: 700px; }
+  .chakra-section .section-body { color: rgba(255,255,255,0.75); margin: 0 auto 60px; text-align: center; }
+
+  .big-chakra-wrap {
+    perspective: 600px; display: inline-block; margin-bottom: 20px;
+  }
+  .big-chakra {
+    width: 220px; height: 220px;
+    border: 8px solid var(--saffron-light);
+    border-radius: 50%; position: relative;
+    animation: spinChakra 20s linear infinite;
+    box-shadow: 0 0 60px rgba(255,190,118,0.3), inset 0 0 30px rgba(255,190,118,0.1);
+  }
+  .big-chakra::before {
+    content: '';
+    position: absolute; top: 50%; left: 50%;
+    width: 18px; height: 18px;
+    background: var(--saffron-light); border-radius: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .chakra-facts {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 36px;
+    max-width: 800px; margin: 40px auto 0;
+  }
+  .chakra-fact {
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,190,118,0.25);
+    border-radius: 16px; padding: 28px 32px; min-width: 160px;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s, background 0.3s;
+  }
+  .chakra-fact:hover { transform: translateY(-6px); background: rgba(255,255,255,0.13); }
+  .chakra-fact-num {
+    font-family: 'Cinzel', serif; font-weight: 900;
+    font-size: 2.8rem; color: var(--saffron-light); line-height: 1;
+    margin-bottom: 6px;
+  }
+  .chakra-fact-label { font-size: 0.85rem; color: rgba(255,255,255,0.65); letter-spacing: 0.05em; }
+
+  /* ── MOVEMENTS ── */
+  .movements-section { background: var(--cream); }
+  .movements-head { text-align: center; margin-bottom: 56px; }
+
+  .movements-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 28px; max-width: 1100px; margin: 0 auto;
+  }
+  .mov-card {
+    border-radius: 20px; overflow: hidden; position: relative;
+    min-height: 280px; display: flex; flex-direction: column; justify-content: flex-end;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.45s ease;
+  }
+  .mov-card.visible { opacity: 1; transform: translateY(0); }
+  .mov-card:hover { transform: translateY(-10px) rotateX(2deg); box-shadow: 0 28px 60px rgba(0,0,0,0.2); }
+  .mov-card:nth-child(2) { transition-delay: 0.1s; }
+  .mov-card:nth-child(3) { transition-delay: 0.2s; }
+
+  .mov-bg-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+  .mov-card:hover .mov-bg-img { transform: scale(1.08); }
+  .mov-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
+  }
+  .mov-content { position: relative; z-index: 2; padding: 24px; }
+  .mov-tag {
+    display: inline-block; background: var(--saffron); color: #fff;
+    font-family: 'Cinzel', serif; font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.12em; padding: 4px 12px; border-radius: 30px; margin-bottom: 10px;
+  }
+  .mov-title { font-family: 'Cinzel', serif; font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .mov-desc { font-size: 0.88rem; color: rgba(255,255,255,0.82); line-height: 1.6; }
+
+  /* ── FREEDOM BANNER ── */
+  .freedom-banner {
+    background: linear-gradient(135deg, var(--saffron) 0%, var(--saffron-deep) 50%, #c05800 100%);
+    padding: 80px 5%; text-align: center; position: relative; overflow: hidden;
+  }
+  .freedom-banner::before {
+    content: 'भारत माता की जय';
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Cinzel', serif; font-size: clamp(4rem, 12vw, 10rem);
+    font-weight: 900; color: rgba(255,255,255,0.07);
+    white-space: nowrap; pointer-events: none;
+  }
+  .freedom-banner h2 {
+    font-family: 'Cinzel', serif; font-weight: 900;
+    font-size: clamp(2rem, 5vw, 3.6rem); color: #fff; position: relative;
+    line-height: 1.15; margin-bottom: 20px;
+  }
+  .freedom-banner p {
+    font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.85);
+    max-width: 640px; margin: 0 auto; line-height: 1.8; position: relative;
+  }
+
+  /* ── QUOTE ── */
+  .quote-section {
+    background: linear-gradient(135deg, #F0FFF0 0%, var(--cream) 100%);
+    padding: 90px 5%; text-align: center;
+  }
+  .quote-block {
+    max-width: 760px; margin: 0 auto;
+    padding: 48px 52px;
+    background: #fff;
+    border-radius: 24px;
+    border-left: 6px solid var(--green);
+    box-shadow: 0 8px 50px rgba(19,136,8,0.1);
+    position: relative;
+  }
+  .quote-block::before {
+    content: '"';
+    position: absolute; top: -20px; left: 36px;
+    font-family: 'Playfair Display', serif; font-size: 8rem;
+    color: var(--saffron); line-height: 1; opacity: 0.3;
+  }
+  .quote-text {
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem); color: var(--text-dark);
+    line-height: 1.65; margin-bottom: 24px; position: relative;
+  }
+  .quote-author {
+    font-family: 'Cinzel', serif; font-weight: 600;
+    font-size: 0.9rem; letter-spacing: 0.12em;
+    color: var(--green); text-transform: uppercase;
+  }
+
+
+  /* ── FOOTER ── */
+  footer {
+    background: linear-gradient(135deg, var(--navy) 0%, #000050 100%);
+    color: rgba(255,255,255,0.7);
+    text-align: center; padding: 56px 5% 36px;
+  }
+  .footer-flag-stripe {
+    height: 6px;
+    background: linear-gradient(90deg, var(--saffron) 33.3%, var(--white) 33.3% 66.6%, var(--green) 66.6%);
+    margin-bottom: 40px; border-radius: 3px;
+  }
+  .footer-title {
+    font-family: 'Cinzel', serif; font-weight: 900;
+    font-size: 1.5rem; color: var(--saffron-light);
+    margin-bottom: 10px; letter-spacing: 0.05em;
+  }
+  .footer-sub { font-size: 0.88rem; margin-bottom: 30px; color: rgba(255,255,255,0.5); }
+  .footer-tricolor {
+    display: flex; justify-content: center; gap: 8px; margin-bottom: 28px;
+  }
+  .ft-dot {
+    width: 14px; height: 14px; border-radius: 50%;
+  }
+  .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+
+  /* ── SCROLL REVEAL UTIL ── */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .timeline::before { left: 20px; }
+    .tl-item, .tl-item:nth-child(even) { flex-direction: column !important; padding-left: 50px; }
+    .tl-card, .tl-spacer { max-width: 100%; }
+    .tl-spacer { display: none; }
+    .tl-dot { left: 20px; }
+    .nav-links { display: none; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-grid > :nth-child(1),
+    .gallery-grid > :nth-child(4) { grid-column: auto; }
+    .movements-grid { grid-template-columns: 1fr; }
+    .heroes-grid { grid-template-columns: repeat(2, 1fr); }
+    .quote-block { padding: 36px 28px; }
+  }
+  @media (max-width: 480px) {
+    .heroes-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-grid > * { grid-column: auto !important; }
+    .chakra-facts { flex-direction: column; align-items: center; }
+  }
+
+  /* Shimmer on stripe */
+  .stripe-saffron::after, .stripe-green::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.25) 50%, transparent 100%);
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  @keyframes shimmer { 0%,100% { opacity: 0; } 50% { opacity: 1; } }
+
+</style>
+<style>
+  /* ── AUDIO PLAYER ── */
+  .audio-player {
+    position: fixed; bottom: 28px; right: 28px; z-index: 2000;
+    display: flex; align-items: center; gap: 12px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(16px);
+    border: 1.5px solid rgba(255,153,51,0.35);
+    border-radius: 60px;
+    padding: 10px 18px 10px 12px;
+    box-shadow: 0 8px 32px rgba(255,153,51,0.2), 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 260px;
+  }
+  .audio-player:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(255,153,51,0.28), 0 4px 12px rgba(0,0,0,0.12);
+  }
+
+  .audio-btn {
+    width: 42px; height: 42px; border-radius: 50%; border: none; cursor: pointer;
+    background: linear-gradient(135deg, var(--saffron) 0%, var(--saffron-deep) 100%);
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(255,153,51,0.45);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .audio-btn:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(255,153,51,0.6); }
+  .audio-btn svg { width: 18px; height: 18px; fill: #fff; }
+
+  .audio-info { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
+  .audio-title {
+    font-family: 'Cinzel', serif; font-size: 0.72rem; font-weight: 700;
+    color: var(--saffron-deep); letter-spacing: 0.06em;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .audio-status {
+    font-family: 'Lato', sans-serif; font-size: 0.68rem;
+    color: var(--text-mid); display: flex; align-items: center; gap: 5px;
+  }
+
+  /* animated sound bars */
+  .sound-bars {
+    display: flex; align-items: flex-end; gap: 2px; height: 14px;
+  }
+  .sound-bars span {
+    display: block; width: 3px; border-radius: 2px;
+    background: var(--green);
+    animation: soundBar 0.9s ease-in-out infinite alternate;
+  }
+  .sound-bars span:nth-child(1) { height: 6px;  animation-delay: 0s; }
+  .sound-bars span:nth-child(2) { height: 12px; animation-delay: 0.15s; }
+  .sound-bars span:nth-child(3) { height: 8px;  animation-delay: 0.3s; }
+  .sound-bars span:nth-child(4) { height: 14px; animation-delay: 0.1s; }
+  .sound-bars span:nth-child(5) { height: 5px;  animation-delay: 0.25s; }
+  .sound-bars.paused span { animation-play-state: paused; height: 3px !important; }
+
+  @keyframes soundBar {
+    from { transform: scaleY(0.3); opacity: 0.6; }
+    to   { transform: scaleY(1);   opacity: 1; }
+  }
+
+  /* volume slider */
+  .audio-volume {
+    display: flex; align-items: center; gap: 6px; margin-top: 4px;
+  }
+  .audio-volume svg { width: 12px; height: 12px; fill: var(--text-mid); flex-shrink: 0; }
+  .vol-slider {
+    -webkit-appearance: none; appearance: none;
+    width: 70px; height: 3px; border-radius: 3px;
+    background: linear-gradient(90deg, var(--saffron) 70%, #ddd 70%);
+    outline: none; cursor: pointer;
+  }
+  .vol-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 12px; height: 12px;
+    border-radius: 50%; background: var(--saffron-deep); cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  }
+
+  /* welcome overlay */
+  .audio-overlay {
+    position: fixed; inset: 0; z-index: 3000;
+    background: rgba(255,248,240,0.96);
+    backdrop-filter: blur(8px);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 20px; text-align: center; padding: 40px;
+    transition: opacity 0.6s ease;
+  }
+  .audio-overlay.hidden { opacity: 0; pointer-events: none; }
+  .overlay-chakra {
+    width: 80px; height: 80px;
+    border: 5px solid var(--chakra-blue); border-radius: 50%;
+    position: relative; animation: spinChakra 8s linear infinite;
+  }
+  .overlay-chakra::before {
+    content: ''; position: absolute; top:50%; left:50%;
+    width: 10px; height: 10px; background: var(--chakra-blue);
+    border-radius: 50%; transform: translate(-50%,-50%);
+  }
+  .overlay-title {
+    font-family: 'Cinzel', serif; font-weight: 900;
+    font-size: clamp(1.4rem, 4vw, 2rem); color: var(--saffron-deep);
+  }
+  .overlay-sub {
+    font-family: 'Lato', sans-serif; font-size: 0.95rem;
+    color: var(--text-mid); max-width: 340px; line-height: 1.6;
+  }
+  .overlay-btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .overlay-btn {
+    padding: 13px 32px; border-radius: 50px; border: none; cursor: pointer;
+    font-family: 'Cinzel', serif; font-weight: 700; font-size: 0.88rem;
+    letter-spacing: 0.1em; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .overlay-btn.primary {
+    background: linear-gradient(135deg, var(--saffron), var(--saffron-deep));
+    color: #fff; box-shadow: 0 6px 20px rgba(255,153,51,0.4);
+  }
+  .overlay-btn.secondary {
+    background: transparent; color: var(--text-mid);
+    border: 1.5px solid rgba(0,0,0,0.15);
+  }
+  .overlay-btn:hover { transform: translateY(-2px); }
+  .overlay-btn.primary:hover { box-shadow: 0 10px 28px rgba(255,153,51,0.55); }
+
+  @media (max-width: 480px) {
+    .audio-player { bottom: 16px; right: 16px; padding: 8px 14px 8px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- AUDIO -->
+<audio id="bgMusic" loop preload="auto">
+  <source src="audio.mp3" type="audio/mpeg"/>
+</audio>
+
+<!-- WELCOME OVERLAY -->
+<div class="audio-overlay" id="audioOverlay">
+  <div class="overlay-chakra" id="overlayChakra"></div>
+  <div class="overlay-title">🇮🇳 Jai Hind</div>
+  <p class="overlay-sub">Welcome to India's Independence Day 2026.<br/>Select a option to begin your journey.</p>
+  <div class="overlay-btns">
+    <button class="overlay-btn primary" id="overlayPlay">♪ Play Music &amp; Enter</button>
+    <button class="overlay-btn secondary" id="overlaySilent">Enter without Sound</button>
+  </div>
+</div>
+
+<!-- AUDIO PLAYER WIDGET -->
+<div class="audio-player" id="audioWidget">
+  <button class="audio-btn" id="playPauseBtn" title="Play / Pause">
+    <svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+  </button>
+  <div class="audio-info">
+    <div class="audio-title">Independence Day 2026</div>
+    <div class="audio-status">
+      <div class="sound-bars paused" id="soundBars">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <span id="audioStatusText">Paused</span>
+    </div>
+    <div class="audio-volume">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      <input type="range" class="vol-slider" id="volSlider" min="0" max="1" step="0.05" value="0.7"/>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-chakra-mini"></div>
+    Jai Hind
+  </div>
+  <div class="nav-links">
+    <a href="#timeline">History</a>
+    <a href="#heroes">Heroes</a>
+    <a href="#movements">Movements</a>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="bg-particles" id="particles"></div>
+
+  <div class="flag-3d-wrapper">
+    <div class="flag-3d" id="flag3d">
+      <span class="flag-stripe stripe-saffron"></span>
+      <span class="flag-stripe stripe-white">
+        <!-- Ashoka Chakra rendered in JS below -->
+        <div class="ashoka" id="mainChakra"></div>
+      </span>
+      <span class="flag-stripe stripe-green"></span>
+    </div>
+    <div class="flag-shadow"></div>
+  </div>
+
+  <h1 class="hero-title">Celebrating 79 Years<br/>of Freedom</h1>
+  <p class="hero-sub">The Spirit of a Nation that Refused to Kneel</p>
+  <p class="hero-date">15 August 2026 · Independence Day</p>
+  <a href="#timeline" class="hero-cta">Explore Our Journey</a>
+
+  <div class="scroll-hint">
+    
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section" id="timeline">
+  <div class="timeline-head reveal">
+    <span class="section-label">The Road to Freedom</span>
+    <h2 class="section-title">India's <span>Freedom Struggle</span></h2>
+    <p class="section-body">From the first spark of rebellion to the dawn of independence — a century of courage, sacrifice, and unbreakable resolve.</p>
+  </div>
+
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-card">
+        <div class="tl-img-wrap">
+          <img src="Battle_of_Plassey.jpg" alt="1757 Plassey" loading="lazy"/>
+          <div class="tl-img-overlay"></div>
+        </div>
+        <div class="tl-card-body">
+          <div class="tl-year">1757</div>
+          <div class="tl-card-title">Battle of Plassey</div>
+          <p class="tl-card-text">The British East India Company defeated Nawab Siraj ud-Daulah, establishing British political dominance in Bengal — the beginning of colonial rule over India.</p>
+        </div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-spacer"></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-spacer"></div>
+      <div class="tl-dot"></div>
+      <div class="tl-card green-top">
+        <div class="tl-img-wrap">
+          <img src="first_war.jpg" alt="1857 Revolt" loading="lazy"
+            />
+          <div class="tl-img-overlay"></div>
+        </div>
+        <div class="tl-card-body">
+          <div class="tl-year">1857</div>
+          <div class="tl-card-title">The First War of Independence</div>
+          <p class="tl-card-text">Sepoy Mutiny erupted across the country. Rani Lakshmibai, Mangal Pandey, and Bahadur Shah Zafar led the first major uprising against British rule — planting the seed of Swaraj.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-card navy-top">
+        <div class="tl-img-wrap">
+          <img src="bal.jpg" alt="INC 1885" loading="lazy"/>
+          <div class="tl-img-overlay"></div>
+        </div>
+        <div class="tl-card-body">
+          <div class="tl-year">1885</div>
+          <div class="tl-card-title">Indian National Congress Founded</div>
+          <p class="tl-card-text">The INC was established as a platform for educated Indians to demand political reforms. Under leaders like Bal Gangadhar Tilak, it evolved from petitions to mass agitation.</p>
+        </div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-spacer"></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-spacer"></div>
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-img-wrap">
+          <img src="jallianwala.jpg" loading="lazy"
+            />
+          <div class="tl-img-overlay"></div>
+        </div>
+        <div class="tl-card-body">
+          <div class="tl-year">1919</div>
+          <div class="tl-card-title">Jallianwala Bagh Massacre</div>
+          <p class="tl-card-text">General Dyer's troops opened fire on unarmed civilians in Amritsar, killing hundreds. The brutal atrocity galvanised the nation and turned millions against British rule forever.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-card green-top">
+        <div class="tl-img-wrap">
+          <img src="salt.jpg" alt="Salt March 1930" loading="lazy"
+            onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Gandhi_leading_the_Salt_March.jpg/800px-Gandhi_leading_the_Salt_March.jpg'"/>
+          <div class="tl-img-overlay"></div>
+        </div>
+        <div class="tl-card-body">
+          <div class="tl-year">1930</div>
+          <div class="tl-card-title">Dandi Salt March</div>
+          <p class="tl-card-text">Mahatma Gandhi led a 240-mile march to the sea to make salt, defying the British Salt Tax. This non-violent act of civil disobedience captured the world's attention and inspired millions.</p>
+        </div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-spacer"></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-spacer"></div>
+      <div class="tl-dot"></div>
+      <div class="tl-card navy-top">
+        <div class="tl-img-wrap">
+          <img src="quit.jpg" alt="Quit India 1942" loading="lazy"
+            onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Subhas_Chandra_Bose.jpg/800px-Subhas_Chandra_Bose.jpg'"/>
+          <div class="tl-img-overlay"></div>
+        </div>
+        <div class="tl-card-body">
+          <div class="tl-year">1942</div>
+          <div class="tl-card-title">Quit India Movement</div>
+          <p class="tl-card-text">Gandhi's electrifying call "Do or Die" launched the Quit India Movement. Netaji Subhas Chandra Bose simultaneously raised the Indian National Army — forcing Britain to reconsider holding India.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-card">
+        <div class="tl-img-wrap">
+          <img src="last.jpg" alt="Independence 1947" loading="lazy"
+            onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/India_Independence_Day_1947.jpg/800px-India_Independence_Day_1947.jpg'"/>
+          <div class="tl-img-overlay"></div>
+        </div>
+        <div class="tl-card-body">
+          <div class="tl-year">1947</div>
+          <div class="tl-card-title">Freedom at Midnight</div>
+          <p class="tl-card-text">At the stroke of midnight on 15 August, Jawaharlal Nehru proclaimed India's independence. The Tricolour was unfurled at the Red Fort — 200 years of struggle had finally borne fruit.</p>
+        </div>
+      </div>
+      <div class="tl-dot" style="border-color:var(--green); box-shadow:0 0 0 8px rgba(19,136,8,0.2); width:24px; height:24px; top:22px;"></div>
+      <div class="tl-spacer"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HEROES -->
+<section class="heroes-section" id="heroes">
+  <div class="heroes-head reveal">
+    <span class="section-label">The Brave Hearts</span>
+    <h2 class="section-title">Icons of <span>Independence</span></h2>
+    <p class="section-body" style="margin:0 auto; text-align:center; max-width:600px;">They gave everything so that we could have everything. Their courage shaped the destiny of a billion people.</p>
+  </div>
+
+  <div class="heroes-grid">
+    <div class="hero-card">
+      <img class="hero-img" src="gandhi.jpg" alt="Mahatma Gandhi"/>
+      <div class="hero-info">
+        <div class="hero-name">Mahatma Gandhi</div>
+        <p class="hero-role">Father of the Nation · Non-violence & Satyagraha champion</p>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img class="hero-img" src="nehru.jpg" alt="Jawaharlal Nehru"/>
+      <div class="hero-info">
+        <div class="hero-name">Jawaharlal Nehru</div>
+        <p class="hero-role">First Prime Minister · Architect of modern India</p>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img class="hero-img" src="bose.jpg" alt="Subhas Chandra Bose"/>
+      <div class="hero-info">
+        <div class="hero-name">Netaji Subhas Bose</div>
+        <p class="hero-role">INA Commander · "Give me blood, I'll give you freedom"</p>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img class="hero-img" src="bhagat.jpg" alt="Bhagat Singh"/>
+      <div class="hero-info">
+        <div class="hero-name">Bhagat Singh</div>
+        <p class="hero-role">Revolutionary martyr · "Inquilab Zindabad"</p>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img class="hero-img" src="rani.jpg" alt="Rani Lakshmibai"/>
+      <div class="hero-info">
+        <div class="hero-name">Rani Lakshmibai</div>
+        <p class="hero-role">Warrior Queen of Jhansi · Symbol of fearless resistance</p>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img class="hero-img" src="patel.jpg" alt="Sardar Patel"
+        onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Sardar-patel.jpg/400px-Sardar-patel.jpg'"/>
+      <div class="hero-info">
+        <div class="hero-name">Sardar Patel</div>
+        <p class="hero-role">Iron Man of India · Unified 562 princely states</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAKRA FACTS -->
+<section class="chakra-section">
+  <span class="section-label">The Ashoka Chakra</span>
+  <h2 class="section-title">The Wheel of <span style="color:var(--saffron-light)">Dharma & Truth</span></h2>
+  <p class="section-body">The 24-spoked Ashoka Chakra at the heart of our flag represents the eternal wheel of law — a reminder that India moves forward, always.</p>
+
+  <div class="big-chakra-wrap">
+    <div class="big-chakra" id="bigChakra"></div>
+  </div>
+
+  <div class="chakra-facts">
+    <div class="chakra-fact">
+      <div class="chakra-fact-num">24</div>
+      <div class="chakra-fact-label">Spokes of Dharma</div>
+    </div>
+    <div class="chakra-fact">
+      <div class="chakra-fact-num">200</div>
+      <div class="chakra-fact-label">Years of Struggle</div>
+    </div>
+    <div class="chakra-fact">
+      <div class="chakra-fact-num">79</div>
+      <div class="chakra-fact-label">Years of Freedom</div>
+    </div>
+    <div class="chakra-fact">
+      <div class="chakra-fact-num">1.4B</div>
+      <div class="chakra-fact-label">Free Citizens</div>
+    </div>
+  </div>
+</section>
+
+<!-- MOVEMENTS -->
+<section class="movements-section" id="movements">
+  <div class="movements-head reveal">
+    <span class="section-label">Key Movements</span>
+    <h2 class="section-title">The <span>Turning Points</span></h2>
+    <p class="section-body" style="margin:0 auto; text-align:center; max-width:600px;">Three defining chapters that broke the spine of colonial rule and brought India's freedom ever closer.</p>
+  </div>
+
+  <div class="movements-grid">
+    <div class="mov-card">
+      <img class="mov-bg-img" src="civil.jpg" alt="Non-cooperation"
+        onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Mahatma_Gandhi_Salt_March.jpg/800px-Mahatma_Gandhi_Salt_March.jpg'"/>
+      <div class="mov-overlay"></div>
+      <div class="mov-content">
+        <span class="mov-tag">1920 – 1922</span>
+        <div class="mov-title">Non-Cooperation Movement</div>
+        <p class="mov-desc">Gandhi called on Indians to boycott British goods, courts, and schools. Millions responded — the first truly mass movement of the independence struggle.</p>
+      </div>
+    </div>
+    <div class="mov-card">
+      <img class="mov-bg-img" src="march.jpg" alt="Civil Disobedience"
+        onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/India_Independence_Day_1947.jpg/800px-India_Independence_Day_1947.jpg'"/>
+      <div class="mov-overlay"></div>
+      <div class="mov-content">
+        <span class="mov-tag" style="background:var(--green)">1930 – 1934</span>
+        <div class="mov-title">Civil Disobedience Movement</div>
+        <p class="mov-desc">The Salt March sparked nationwide defiance of unjust British laws. Indians broke the law openly and peacefully — proving a nation could fight with truth as its weapon.</p>
+      </div>
+    </div>
+    <div class="mov-card">
+      <img class="mov-bg-img" src="do.jpg" alt="Quit India"/>
+      <div class="mov-overlay"></div>
+      <div class="mov-content">
+        <span class="mov-tag" style="background:var(--chakra-blue)">1942</span>
+        <div class="mov-title">Quit India Movement</div>
+        <p class="mov-desc">"Do or Die" — Gandhi's most radical call to action. Simultaneous uprisings across India made British administration untenable and signalled freedom was inevitable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREEDOM BANNER -->
+<div class="freedom-banner">
+  <h2>Vande Mataram<br/>जय हिन्द</h2>
+  <p>On this sacred day, we honour every soul that dreamed of a free India — the farmers, the poets, the soldiers, the mothers who wept and waited, and the children who grew up to lead a nation.</p>
+</div>
+
+<!-- QUOTE -->
+<section class="quote-section">
+  <div class="quote-block reveal">
+    <p class="quote-text">At the stroke of the midnight hour, when the world sleeps, India will awake to life and freedom. A moment comes, which comes but rarely in history, when we step out from the old to the new...</p>
+    <div class="quote-author">— Jawaharlal Nehru, 15 August 1947</div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-flag-stripe"></div>
+  <div class="footer-title">Happy Independence Day 2026</div>
+  <div class="footer-sub">Celebrating 79 glorious years of freedom, democracy, and unity in diversity.</div>
+  <div class="footer-tricolor">
+    <div class="ft-dot" style="background:var(--saffron)"></div>
+    <div class="ft-dot" style="background:#fff; border:1px solid rgba(255,255,255,0.3)"></div>
+    <div class="ft-dot" style="background:var(--green)"></div>
+  </div>
+  <div class="footer-copy">भारत माता की जय · Jai Hind · Vande Mataram</div>
+</footer>
+
+<script>
+// ── ASHOKA CHAKRA SPOKES ──
+function buildChakra(el, spokes, r) {
+  el.style.width = r+'px'; el.style.height = r+'px';
+  for (let i = 0; i < spokes; i++) {
+    const s = document.createElement('div');
+    s.className = 'ashoka-spoke';
+    s.style.cssText = `
+      position:absolute; top:50%; left:50%;
+      width:${r/2 - 4}px; height:1.5px;
+      background:var(--chakra-blue);
+      transform-origin:left center;
+      transform:rotate(${(360/spokes)*i}deg);
+    `;
+    el.appendChild(s);
+  }
+}
+buildChakra(document.getElementById('mainChakra'), 24, 50);
+
+// Big chakra
+const bigC = document.getElementById('bigChakra');
+for (let i = 0; i < 24; i++) {
+  const s = document.createElement('div');
+  s.style.cssText = `
+    position:absolute; top:50%; left:50%;
+    width:94px; height:2px;
+    background:rgba(255,190,118,0.85);
+    transform-origin:left center;
+    transform:rotate(${15*i}deg);
+  `;
+  bigC.appendChild(s);
+}
+
+// ── FLAG 3D MOUSE TILT ──
+const flag = document.getElementById('flag3d');
+document.addEventListener('mousemove', e => {
+  const cx = window.innerWidth/2, cy = window.innerHeight/2;
+  const rx = ((e.clientY - cy) / cy) * -6;
+  const ry = ((e.clientX - cx) / cx) *  8;
+  flag.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
+});
+
+// ── BACKGROUND PARTICLES ──
+const container = document.getElementById('particles');
+const colors = ['#FF9933','#138808','#000080','#D4AF37'];
+for (let i = 0; i < 22; i++) {
+  const p = document.createElement('div');
+  const size = Math.random()*60 + 20;
+  const color = colors[Math.floor(Math.random()*colors.length)];
+  p.className = 'particle';
+  p.style.cssText = `
+    width:${size}px; height:${size}px;
+    background:${color};
+    left:${Math.random()*100}%;
+    top:${Math.random()*100}%;
+    animation:particleDrift ${8+Math.random()*14}s ${Math.random()*8}s linear infinite;
+  `;
+  container.appendChild(p);
+}
+// Add keyframes for particles
+const style = document.createElement('style');
+style.textContent = `@keyframes particleDrift {
+  0%   { transform:translate(0,0) scale(1); opacity:0; }
+  10%  { opacity:0.12; }
+  90%  { opacity:0.08; }
+  100% { transform:translate(${(Math.random()>0.5?1:-1)*80}px,${(Math.random()>0.5?1:-1)*80}px) scale(1.3); opacity:0; }
+}`;
+document.head.appendChild(style);
+
+// ── SCROLL REVEAL ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal, .tl-item, .hero-card, .mov-card').forEach(el => {
+  observer.observe(el);
+});
+
+// ── STAGGER HERO CARDS ──
+document.querySelectorAll('.hero-card').forEach((card, i) => {
+  card.style.transitionDelay = `${i * 0.1}s`;
+});
+
+// ── PARALLAX on hero particles ──
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  container.style.transform = `translateY(${y * 0.3}px)`;
+});
+
+// ── AUDIO PLAYER ──
+const music       = document.getElementById('bgMusic');
+const overlay     = document.getElementById('audioOverlay');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const playIcon    = document.getElementById('playIcon');
+const soundBars   = document.getElementById('soundBars');
+const statusText  = document.getElementById('audioStatusText');
+const volSlider   = document.getElementById('volSlider');
+
+// SVG paths
+const PLAY_PATH  = 'M8 5v14l11-7z';
+const PAUSE_PATH = 'M6 19h4V5H6v14zm8-14v14h4V5h-4z';
+
+music.volume = 0.7;
+
+function setPlaying(isPlaying) {
+  playIcon.querySelector('path').setAttribute('d', isPlaying ? PAUSE_PATH : PLAY_PATH);
+  soundBars.classList.toggle('paused', !isPlaying);
+  statusText.textContent = isPlaying ? 'Playing' : 'Paused';
+}
+
+// Overlay — play with music
+document.getElementById('overlayPlay').addEventListener('click', () => {
+  overlay.classList.add('hidden');
+  setTimeout(() => overlay.style.display = 'none', 600);
+  music.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+});
+
+// Overlay — enter silent
+document.getElementById('overlaySilent').addEventListener('click', () => {
+  overlay.classList.add('hidden');
+  setTimeout(() => overlay.style.display = 'none', 600);
+  setPlaying(false);
+});
+
+// Play/pause toggle
+playPauseBtn.addEventListener('click', () => {
+  if (music.paused) {
+    music.play().then(() => setPlaying(true));
+  } else {
+    music.pause();
+    setPlaying(false);
+  }
+});
+
+// Volume slider
+volSlider.addEventListener('input', () => {
+  music.volume = volSlider.value;
+  // update track fill
+  const pct = volSlider.value * 100;
+  volSlider.style.background = `linear-gradient(90deg, var(--saffron) ${pct}%, #ddd ${pct}%)`;
+});
+
+// Build overlay chakra spokes
+const oc = document.getElementById('overlayChakra');
+for (let i = 0; i < 24; i++) {
+  const s = document.createElement('div');
+  s.style.cssText = `
+    position:absolute; top:50%; left:50%;
+    width:32px; height:1.5px;
+    background:var(--chakra-blue);
+    transform-origin:left center;
+    transform:rotate(${15*i}deg);
+  `;
+  oc.appendChild(s);
+}
+</script>
+</body>
+</html>
